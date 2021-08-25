@@ -9,11 +9,13 @@
 
 void division(complex c1, complex c2, complex *c3)
 {
-    c1.re = (double)c1.re;
-    c1.im = (double)c1.im;
-    c2.re = (double)c2.re;
-    c2.im = (double)c2.im;
+    c1.re = (float)c1.re;
+    c1.im = (float)c1.im;
+    c2.re = (float)c2.re;
+    c2.im = (float)c2.im;
 
-    c3->re = ((c2.im * c1.re) - (c2.re * c1.im)) / ((c1.re * c1.re) + (c1.im * c1.im));
-    c3->im = ((c2.re * c1.re) + (c2.im * c1.im)) / ((c1.re * c1.re) + (c1.im * c1.im));
+    multiplication(c1, conjugate(c2), c3);
+
+    c3->re = c3->re / ((c2.re * c2.re) + (c2.im * c2.im));
+    c3->im = c3->im / ((c2.re * c2.re) + (c2.im * c2.im));
 }
