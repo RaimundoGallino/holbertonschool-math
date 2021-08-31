@@ -1,4 +1,15 @@
-#include "holberton.h"
+#include <stdio.h>
+
+/**
+ * struct complex - struct of a complex number
+ * @re: real number
+ * @im: imaginary number
+ */
+
+struct complex {
+    int re;
+    int im;
+} typedef complex;
 
 /**
  * display_complex_number - display a complex number
