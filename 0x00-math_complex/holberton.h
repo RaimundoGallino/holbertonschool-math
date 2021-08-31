@@ -7,10 +7,10 @@
  * @im: imaginary number
  */
 
-struct complex {
+typedef struct complex {
     int re;
     int im;
-} typedef complex;
+} complex;
 
 void display_complex_number(complex c);
 complex conjugate(complex c);
